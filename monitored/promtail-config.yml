@@ -1,0 +1,22 @@
+server:
+  http_listen_port: 9080
+  grpc_listen_port: 0
+
+positions:
+  filename: /tmp/positions.yaml
+
+clients:
+  - url: http://3.83.98.199:3100/loki/api/v1/push
+
+scrape_configs:
+
+# local machine logs
+
+- job_name: local
+  static_configs:
+  - targets:
+      - localhost
+    labels:
+      job: awslogs
+      __path__: /var/log/*log
+  

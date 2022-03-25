@@ -1,0 +1,43 @@
+- hosts: logging
+  become: true
+  tasks:
+  
+    - name: ensure repository key is installed
+      apt_key:
+        url: https://download.docker.com/linux/ubuntu/gpg
+        state: present
+
+    - name: ensure docker registry is available
+      apt_repository: repo='deb https://download.docker.com/linux/ubuntu bionic stable' state=present
+
+    - name: ensure docker and dependencies are installed
+      apt: name=docker-ce update_cache=yes
+#After installing docker, we will install docker-compose to enable us install prometheus, alertmanager and grafana.
+    - name: Install docker-compose from official github repo
+      get_url:
+        url : https://github.com/docker/compose/releases/download/1.29.2/docker-compose-Linux-x86_64
+        dest: /usr/local/bin/docker-compose
+        mode: 'u+x,g+x'
+
+    - name: create directory for docker-compose
+      file:  
+        path: /app/
+        state: directory
+    #Copy the files from the local machine to the remote server
+    - name: Download Loki
+      shell:
+        cmd: |
+          cd /app
+          wget https://raw.githubusercontent.com/grafana/loki/v2.4.2/production/docker-compose.yaml -O docker-compose.yaml
+
+    - name: Copy grafana file 
+      ansible.builtin.copy:
+        src: /Users/favourudoh/Documents/zeigiest project/logging-files/grafana
+        dest: /app/
+
+
+    - service: name=docker state=restarted
+    
+    - name: Start docker compose
+      shell:  
+        cmd: cd /app && docker-compose up -d
