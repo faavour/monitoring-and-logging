@@ -1,48 +1,37 @@
 terraform {
   required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "~> 3.27"
+    linode = {
+      source  = "linode/linode"
+      version = "1.16.0"
     }
   }
-
-  required_version = ">= 0.14.9"
 }
 
-provider "aws" {
-  profile = "default"
-  region  = "us-west-2"
+provider "linode" {
+  token = var.linode_token
 }
 
-resource "aws_instance" "monitoring" {
-  ami           = "ami-830c94e3"
-  instance_type = "t2.micro"
-
-  tags = {
-    Name = var.instance_name
-
-  }
+resource "linode_instance" "monitoring" {
+  label     = "monitoring"
+  image     = "linode/ubuntu18.04"
+  region    = "us-central"
+  type      = "g6-standard-1"
+  root_pass = var.root_pass
 
 }
 
-resource "aws_instance" "logging" {
-  ami           = "ami-830c94e3"
-  instance_type = "t2.micro"
-
-  tags = {
-    Name = var.instance_name_1
-
-  }
-
+resource "linode_instance" "logging" {
+  label     = "logging"
+  image     = "linode/ubuntu18.04"
+  region    = "us-central"
+  type      = "g6-standard-1"
+  root_pass = var.root_pass
 }
 
-resource "aws_instance" "zeigeist" {
-  ami           = "ami-830c94e3"
-  instance_type = "t2.micro"
-
-  tags = {
-    Name = var.instance_name_2
-
-  }
-
+resource "linode_instance" "zeigeist" {
+  label     = "zeigeist"
+  image     = "linode/ubuntu18.04"
+  region    = "us-central"
+  type      = "g6-standard-1"
+  root_pass = var.root_pass
 }

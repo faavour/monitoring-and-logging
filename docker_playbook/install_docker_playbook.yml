@@ -32,22 +32,22 @@
 #Copy the files from the local machine to the remote server
     - name: Copy file with owner and permissions
       ansible.builtin.copy:
-        src: /Users/favourudoh/Documents/zeigiest project/docker-compose.yml
+        src: /Users/favourudoh/monitoring-and-logging/docker-compose.yml
         dest: /app/
 
     - name: Copy prometheus file 
       ansible.builtin.copy:
-        src: /Users/favourudoh/Documents/zeigiest project/prometheus
+        src: /Users/favourudoh/monitoring-and-logging/prometheus
         dest: /app/
 
     - name: Copy alert manager file 
       ansible.builtin.copy:
-        src: /Users/favourudoh/Documents/zeigiest project/alertmanager
+        src: /Users/favourudoh/monitoring-and-logging/alertmanager
         dest: /app/
 
     - name: Copy grafana file 
       ansible.builtin.copy:
-        src: /Users/favourudoh/Documents/zeigiest project/grafana
+        src: /Users/favourudoh/monitoring-and-logging/grafana
         dest: /app/
 
 

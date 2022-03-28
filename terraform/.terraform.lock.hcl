@@ -1,21 +1,22 @@
 # This file is maintained automatically by "terraform init".
 # Manual edits may be lost in future updates.
 
-provider "registry.terraform.io/hashicorp/aws" {
-  version     = "3.75.1"
-  constraints = "~> 3.27"
+provider "registry.terraform.io/linode/linode" {
+  version     = "1.16.0"
+  constraints = "1.16.0"
   hashes = [
-    "h1:zgO9MSF32Rz6lOBumY+FyPZESYwlL5SUXOViTV5cs28=",
-    "zh:11c2ee541ca1da923356c9225575ba294523d7b6af82d6171c912470ef0f90cd",
-    "zh:19fe975993664252b4a2ff1079546f2b186b01d1a025a94a4f15c37e023806c5",
-    "zh:442e7fc145b2debebe9279b283d07f5f736dc1776c2e5b1702728a6eb03789d0",
-    "zh:7a77991b204ae2c16ac29a32226135d5fdbda40c8dafa77c5adf5439a346be77",
-    "zh:89a257933181c15293c15a858fbfe7252129cc57cc2ec05b6c0b595d1bfe9d38",
-    "zh:b1813ea5b6b0fd88ea85b1b21b8e4119566d1bc34feca297b4fb39d0536893cb",
-    "zh:c519f3292ae431bd2381f88a95bd37c52f7a56d91feef88511e929344c180549",
-    "zh:d3dbe88b661c073c174f04f73adc2720372143bdfa12f4fe8f411332e64662cf",
-    "zh:e92a27e3c7295b031b5d62dd9428966c96e3157fc768b3d848a9ac60d1661c8e",
-    "zh:ecd664c0d664fcf2d8a89a01462cb00bcae37da200305aef2de1b8fe185c9cd8",
-    "zh:ed6ce1f9fa96aa28dd65842f852abed25f919d20b5cf53d26cec5b3f4d845725",
+    "h1:Fdep/ol4g9x+9TrYYd8RNTTEQop8K3gwWM2DhBWyR7U=",
+    "zh:03c867440797b82012cd5d97f58fef5885dc0248683227299a39af836df222db",
+    "zh:0486be7f72d6ea73d10140e23be8c1d2772b2d8be28c7bb39c73be83601405cf",
+    "zh:181929d6880cac6500f4af1f3799385c47ccd69872cacf1042a3a48e445b2b02",
+    "zh:18b7f6cc1ddf86e28322638607e1f84c1e9d56824c26903e22d4d12352f20b6e",
+    "zh:4e65e7f9e17c334ff7047fc2dd8fc479c2509cba66834d89e2033a45e9275fe3",
+    "zh:6077eda3fdf77a5158d9dc1a0c38492e23f7d679b1ac96382ba92ebe92e19266",
+    "zh:642e7c96867c519176d84228a7f9104352212ae3c999b409eee1076b7ed90a96",
+    "zh:6451f5117125fad9884214fe2f2635a2bed95912e64cf1c66a57c38558dfe907",
+    "zh:83b957b30da19586393b9aea2cc93524a7d4c43dd07d11129a11d29c2b4bfb21",
+    "zh:852954fe6cfe5278bd7c3d1079a9832bbf8c58436486489ed85154c0a0600633",
+    "zh:a2385c51147a3c40707f7bfceb673c077e1054e8af6fb4c808cef56f995b8193",
+    "zh:d21cd5cb5a635d18547430fe6cdfe3c6898541f9f3adc110edbf8d6e0439390d",
   ]
 }
