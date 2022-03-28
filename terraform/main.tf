@@ -19,7 +19,7 @@ resource "aws_instance" "monitoring" {
   instance_type = "t2.micro"
 
   tags = {
-    Name = "Monitoring Server"
+    Name = var.instance_name
 
   }
 
@@ -30,7 +30,7 @@ resource "aws_instance" "logging" {
   instance_type = "t2.micro"
 
   tags = {
-    Name = "Logging Server"
+    Name = var.instance_name_1
 
   }
 
@@ -41,7 +41,7 @@ resource "aws_instance" "zeigeist" {
   instance_type = "t2.micro"
 
   tags = {
-    Name = "Zeigeist Server"
+    Name = var.instance_name_2
 
   }
 
