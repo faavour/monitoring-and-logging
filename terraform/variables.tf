@@ -1,21 +1,9 @@
-
-variable "instance_name" {
-  description = "Value of the Name tag for the EC2 instance"
+variable "root_pass" {
   type        = string
-  default     = "Monitoring Server"
-
+  description = "Root password for the linode servers"
 }
-variable "instance_name_1" {
-  description = "Value of the Name tag for the EC2 instance"
+
+variable "linode_token" {
   type        = string
-
-  default = "Logging Server"
-
-}
-variable "instance_name_2" {
-  description = "Value of the Name tag for the EC2 instance"
-  type        = string
-
-  default = "Zeigiest Server"
-
+  description = "API token for linode"
 }

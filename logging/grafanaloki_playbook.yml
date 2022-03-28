@@ -32,7 +32,7 @@
 
     - name: Copy grafana file 
       ansible.builtin.copy:
-        src: /Users/favourudoh/Documents/zeigiest project/logging-files/grafana
+        src: /Users/favourudoh/monitoring-and-logging/logging-files/grafana
         dest: /app/
 
 

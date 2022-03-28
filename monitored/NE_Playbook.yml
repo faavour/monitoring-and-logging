@@ -12,7 +12,7 @@
 
     - name: Copy node exporter service file to etc directory
       ansible.builtin.copy:
-        src: /Users/favourudoh/Documents/zeigiest project/monitored/node-exporter.service
+        src: /Users/favourudoh/monitoring-and-logging/node-exporter.service
         dest: /etc/systemd/system
 
     - name: Run the node-exporter.service file
@@ -46,12 +46,12 @@
     #Copy the files from the local machine to the remote server
     - name: Copy file with owner and permissions
       ansible.builtin.copy:
-        src: /Users/favourudoh/Documents/zeigiest project/monitored/docker-compose.yml
+        src: /Users/favourudoh/monitoring-and-logging/monitored/docker-compose.yml
         dest: /app/
 
     - name: Copy  file 
       ansible.builtin.copy:
-        src: /Users/favourudoh/Documents/zeigiest project/monitored/promtail-config.yml
+        src: /Users/favourudoh/monitoring-and-logging/monitored/promtail-config.yml
         dest: /app/
 
 

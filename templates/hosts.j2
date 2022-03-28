@@ -1,0 +1,4 @@
+[linode]
+{% for i in linode %}
+{{i["ip"]}} ansible_user=root ansible_password={{i["password"]}}
+{%endfor%}
