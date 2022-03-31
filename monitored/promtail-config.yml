@@ -6,7 +6,7 @@ positions:
   filename: /tmp/positions.yaml
 
 clients:
-  - url: http://3.83.98.199:3100/loki/api/v1/push
+  - url: http://69.164.198.31:3100/loki/api/v1/push
 
 scrape_configs:
 
@@ -17,6 +17,6 @@ scrape_configs:
   - targets:
       - localhost
     labels:
-      job: awslogs
+      job: linode
       __path__: /var/log/*log
   

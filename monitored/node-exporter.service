@@ -3,7 +3,7 @@ Description=Prometheus exporter for machine metrics
 
 [Service]
 Restart=always
-User=ubuntu
+User=root
 ExecStart=/usr/local/bin/node_exporter
 ExecReload=/bin/kill -HUP $MAINPID
 TimeoutStopSec=20s

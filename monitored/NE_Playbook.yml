@@ -12,7 +12,7 @@
 
     - name: Copy node exporter service file to etc directory
       ansible.builtin.copy:
-        src: /Users/favourudoh/monitoring-and-logging/node-exporter.service
+        src: /Users/favourudoh/monitoring-and-logging/monitored/node-exporter.service
         dest: /etc/systemd/system
 
     - name: Run the node-exporter.service file

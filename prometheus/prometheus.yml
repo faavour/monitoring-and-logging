@@ -71,4 +71,4 @@ scrape_configs:
 #      port: 9091
 
     static_configs:
-         - targets: ['44.201.251.42:9100']
+         - targets: ['104.237.128.46:9100']
