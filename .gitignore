@@ -1,2 +1,2 @@
 .terraform
-./docker_playbook/inventory.ini
+docker_playbook/inventory.ini
