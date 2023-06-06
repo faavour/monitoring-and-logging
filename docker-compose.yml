@@ -36,7 +36,6 @@ services:
      placement:
        constraints:
          - node.hostname == ${HOSTNAME}
-
   alertmanager:
     image: prom/alertmanager:latest
     ports:
